@@ -17,6 +17,7 @@ public class HomeFrame extends javax.swing.JFrame {
         //Here you made changes for activities you made like button.
         initComponents();
         jButton1.setBorder(new javax.swing.border.LineBorder(java.awt.Color.CYAN, 20, true));
+        //test
     }
 
     /**
@@ -32,7 +33,6 @@ public class HomeFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        Settingsbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -54,31 +54,15 @@ public class HomeFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(1, 4, 9));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(62, 69, 77)));
 
-        Settingsbtn.setBackground(new java.awt.Color(46, 64, 87));
-        Settingsbtn.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        Settingsbtn.setText("Settings");
-        Settingsbtn.setToolTipText("");
-        Settingsbtn.setBorder(null);
-        Settingsbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SettingsbtnActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Settingsbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+            .addGap(0, 331, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Settingsbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -87,7 +71,7 @@ public class HomeFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 359, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 341, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(565, 565, 565))
         );
@@ -124,10 +108,6 @@ public class HomeFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void SettingsbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SettingsbtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SettingsbtnActionPerformed
-
 
     public static void main(String args[]) {
        
@@ -146,7 +126,6 @@ public class HomeFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Settingsbtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
