@@ -11,6 +11,11 @@ package com.mycompany.moneymate;
 public class MoneyMate {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            System.out.println("Launching HomeFrame..."); // debug message
+            HomeFrame frame = new HomeFrame();
+            frame.setVisible(true); // VERY IMPORTANT
+        });
     }
 }
