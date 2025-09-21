@@ -4,6 +4,11 @@
  */
 package com.mycompany.moneymate;
 
+import java.awt.Color;
+import javax.swing.ButtonModel;
+import javax.swing.JFrame;
+import javax.swing.UIManager;
+
 /**
  *
  * @author Admin
@@ -11,13 +16,17 @@ package com.mycompany.moneymate;
 public class HomeFrame extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(HomeFrame.class.getName());
-
+    
 
     public HomeFrame() {
+        
         //Here you made changes for activities you made like button.
         initComponents();
         jButton1.setBorder(new javax.swing.border.LineBorder(java.awt.Color.CYAN, 20, true));
-        //test
+         setTitle("MoneyMate - Home");           
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(true);                 // allow maximize/minimize
+
     }
 
     /**
@@ -33,10 +42,15 @@ public class HomeFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        btnsettings = new javax.swing.JButton();
+        btnIncome = new javax.swing.JButton();
+        btnExpense = new javax.swing.JButton();
+        btnReport = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
-        setBackground(new java.awt.Color(9, 21, 64));
+        setBackground(new java.awt.Color(13, 17, 23));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jPanel1.setBackground(new java.awt.Color(13, 17, 23));
         jPanel1.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
@@ -54,15 +68,69 @@ public class HomeFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(1, 4, 9));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(62, 69, 77)));
 
+        btnsettings.setBackground(new java.awt.Color(1, 4, 9));
+        btnsettings.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnsettings.setForeground(new java.awt.Color(255, 255, 255));
+        btnsettings.setText("Settings");
+        btnsettings.setBorder(null);
+        btnsettings.setBorderPainted(false);
+        btnsettings.setFocusPainted(false);
+        btnsettings.setIconTextGap(50);
+        btnsettings.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsettingsActionPerformed(evt);
+            }
+        });
+
+        btnIncome.setBackground(new java.awt.Color(1, 4, 9));
+        btnIncome.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnIncome.setForeground(new java.awt.Color(255, 255, 255));
+        btnIncome.setText("Add Income");
+        btnIncome.setBorder(null);
+        btnIncome.setBorderPainted(false);
+        btnIncome.setFocusPainted(false);
+        btnIncome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIncomeActionPerformed(evt);
+            }
+        });
+
+        btnExpense.setBackground(new java.awt.Color(1, 4, 9));
+        btnExpense.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnExpense.setForeground(new java.awt.Color(255, 255, 255));
+        btnExpense.setText("Add Expense");
+        btnExpense.setBorder(null);
+        btnExpense.setBorderPainted(false);
+        btnExpense.setFocusPainted(false);
+
+        btnReport.setBackground(new java.awt.Color(1, 4, 9));
+        btnReport.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnReport.setForeground(new java.awt.Color(255, 255, 255));
+        btnReport.setText("Report");
+        btnReport.setBorder(null);
+        btnReport.setBorderPainted(false);
+        btnReport.setFocusPainted(false);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 331, Short.MAX_VALUE)
+            .addComponent(btnsettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnIncome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnExpense, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
+            .addComponent(btnReport, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(btnIncome, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnExpense, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnReport, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 356, Short.MAX_VALUE)
+                .addComponent(btnsettings, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -78,7 +146,7 @@ public class HomeFrame extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(476, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(277, 277, 277))
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -108,6 +176,14 @@ public class HomeFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btnsettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsettingsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnsettingsActionPerformed
+
+    private void btnIncomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIncomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIncomeActionPerformed
+
 
     public static void main(String args[]) {
        
@@ -126,6 +202,10 @@ public class HomeFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnExpense;
+    private javax.swing.JButton btnIncome;
+    private javax.swing.JButton btnReport;
+    private javax.swing.JButton btnsettings;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
